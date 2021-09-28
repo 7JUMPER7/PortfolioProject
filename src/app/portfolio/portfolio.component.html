@@ -1,0 +1,37 @@
+<div [ngClass]="{container: true, containerLight: !darkTheme}">
+  <label class="themeSelector" for="themeSelector">
+    <input type="checkbox" id="themeSelector" (change)="changeTheme()" [checked]="darkTheme">
+    <div>Dark Theme</div>
+  </label>
+  <h3>{{person.name|titlecase}}</h3>
+  <div ngClass="item">
+    <span>Phone:</span>
+    <p>{{person.phone}}</p>
+  </div>
+  <div ngClass="item">
+    <span>Email:</span>
+    <p>{{person.email}}</p>
+  </div>
+  <div ngClass="item">
+    <span>City:</span>
+    <p>{{person.city}}</p>
+  </div>
+  <div ngClass="item">
+    <span>Experience:</span>
+    <p *ngIf="person.experience <= 2">Junior</p>
+    <p *ngIf="person.experience > 2 && person.experience <= 4">Middle</p>
+    <p *ngIf="person.experience > 4">Senior</p>
+    <p>{{person.experience|number}} years of experience</p>
+  </div>
+  <div ngClass="item">
+    <span>Skills:</span>
+    <p>{{person.skills}}</p>
+  </div>
+  <div ngClass="photos">
+    <img *ngFor="let photo of person.photoPaths" src={{photo}}>
+  </div>
+  <div ngClass="item">
+    <span>Links:</span>
+    <a *ngFor="let link of person.links" href={{link}} target="blanck">{{link|linkHeader}}<br></a>
+  </div>
+</div>

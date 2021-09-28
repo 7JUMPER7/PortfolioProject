@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: whitesmoke;
+  font-family: Bahnschrift;
+  font-weight: lighter;
+}
+.container {
+  position: relative;
+  margin: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #145a8c;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, .5);
+  font-size: 17px;
+}
+.container img {
+  border: 5px solid white;
+  border-radius: 10px;
+}

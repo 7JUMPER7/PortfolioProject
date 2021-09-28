@@ -2,11 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { LinkHeaderPipe } from './linkHeader.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
-  ],
+    AppComponent,
+      PortfolioComponent,
+      LinkHeaderPipe
+   ],
   imports: [
     BrowserModule
   ],
