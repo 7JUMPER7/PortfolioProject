@@ -18,14 +18,12 @@
   </div>
   <div ngClass="item">
     <span>Experience:</span>
-    <p *ngIf="person.experience <= 2">Junior</p>
-    <p *ngIf="person.experience > 2 && person.experience <= 4">Middle</p>
-    <p *ngIf="person.experience > 4">Senior</p>
+    <p>{{getExperience()}}</p>
     <p>{{person.experience|number}} years of experience</p>
   </div>
   <div ngClass="item">
     <span>Skills:</span>
-    <p>{{person.skills}}</p>
+    <p>{{getSkills()}}</p>
   </div>
   <div ngClass="photos">
     <img *ngFor="let photo of person.photoPaths" src={{photo}}>
